@@ -15,12 +15,12 @@ namespace IdentityServer7.Models
         /// <summary>
         /// The claim type
         /// </summary>
-        public string Type { get; set; }
+        public string? Type { get; set; }
         
         /// <summary>
         /// The claim value
         /// </summary>
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         /// <summary>
         /// The claim value type
@@ -65,8 +65,8 @@ namespace IdentityServer7.Models
             {
                 int hash = 17;
 
-                hash = hash * 23 + Value.GetHashCode();
-                hash = hash * 23 + Type.GetHashCode();
+                hash = hash * 23 + Value!.GetHashCode();
+                hash = hash * 23 + Type!.GetHashCode();
                 hash = hash * 23 + ValueType.GetHashCode();
                 return hash;
             }

@@ -43,7 +43,7 @@ namespace IdentityServer7.Stores.Serialization
         /// <returns></returns>
         public T Deserialize<T>(string json)
         {
-            return JsonConvert.DeserializeObject<T>(json, _settings);
+            return JsonConvert.DeserializeObject<T>(json, _settings)!;
         }
     }
 }

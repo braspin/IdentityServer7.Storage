@@ -29,7 +29,7 @@ namespace IdentityServer7.Models
         /// </summary>
         /// <param name="name">The name.</param>
         public ApiResource(string name)
-            : this(name, name, null)
+            : this(name, name, null!)
         {
         }
 
@@ -39,7 +39,7 @@ namespace IdentityServer7.Models
         /// <param name="name">The name.</param>
         /// <param name="displayName">The display name.</param>
         public ApiResource(string name, string displayName)
-            : this(name, displayName, null)
+            : this(name, displayName, null!)
         {
         }
 

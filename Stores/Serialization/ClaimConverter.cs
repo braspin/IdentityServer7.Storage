@@ -17,10 +17,10 @@ namespace IdentityServer7.Stores.Serialization
             return typeof(Claim) == objectType;
         }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
         {
             var source = serializer.Deserialize<ClaimLite>(reader);
-            var target = new Claim(source.Type, source.Value, source.ValueType);
+            var target = new Claim(source!.Type!, source!.Value!, source!.ValueType!);
             return target;
         }
 

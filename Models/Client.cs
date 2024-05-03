@@ -29,7 +29,7 @@ namespace IdentityServer7.Models
         /// <summary>
         /// Unique ID of the client
         /// </summary>
-        public string ClientId { get; set; }
+        public string? ClientId { get; set; }
 
         /// <summary>
         /// Gets or sets the protocol type.
@@ -52,22 +52,22 @@ namespace IdentityServer7.Models
         /// <summary>
         /// Client display name (used for logging and consent screen)
         /// </summary>
-        public string ClientName { get; set; }
+        public string? ClientName { get; set; }
 
         /// <summary>
         /// Description of the client.
         /// </summary>
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// URI to further information about client (used on consent screen)
         /// </summary>
-        public string ClientUri { get; set; }
+        public string? ClientUri { get; set; }
 
         /// <summary>
         /// URI to client logo (used on consent screen)
         /// </summary>
-        public string LogoUri { get; set; }
+        public string? LogoUri { get; set; }
 
         /// <summary>
         /// Specifies whether a consent screen is required (defaults to <c>false</c>)
@@ -129,7 +129,7 @@ namespace IdentityServer7.Models
         /// <summary>
         /// Specifies logout URI at client for HTTP front-channel based logout.
         /// </summary>
-        public string FrontChannelLogoutUri { get; set; }
+        public string? FrontChannelLogoutUri { get; set; }
 
         /// <summary>
         /// Specifies if the user's session id should be sent to the FrontChannelLogoutUri. Defaults to <c>true</c>.
@@ -139,7 +139,7 @@ namespace IdentityServer7.Models
         /// <summary>
         /// Specifies logout URI at client for HTTP back-channel based logout.
         /// </summary>
-        public string BackChannelLogoutUri { get; set; }
+        public string? BackChannelLogoutUri { get; set; }
 
         /// <summary>
         /// Specifies if the user's session id should be sent to the BackChannelLogoutUri. Defaults to <c>true</c>.
@@ -272,7 +272,7 @@ namespace IdentityServer7.Models
         /// <summary>
         /// Gets or sets a salt value used in pair-wise subjectId generation for users of this client.
         /// </summary>
-        public string PairWiseSubjectSalt { get; set; }
+        public string? PairWiseSubjectSalt { get; set; }
 
         /// <summary>
         /// The maximum duration (in seconds) since the last time the user authenticated.
@@ -285,7 +285,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The type of the device flow user code.
         /// </value>
-        public string UserCodeType { get; set; }
+        public string? UserCodeType { get; set; }
 
         /// <summary>
         /// Gets or sets the device code lifetime.

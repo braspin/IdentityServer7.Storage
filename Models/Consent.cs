@@ -18,7 +18,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The subject identifier.
         /// </value>
-        public string SubjectId { get; set; }
+        public string? SubjectId { get; set; }
         
         /// <summary>
         /// Gets or sets the client identifier.
@@ -26,7 +26,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The client identifier.
         /// </value>
-        public string ClientId { get; set; }
+        public string? ClientId { get; set; }
         
         /// <summary>
         /// Gets or sets the scopes.
@@ -34,7 +34,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The scopes.
         /// </value>
-        public IEnumerable<string> Scopes { get; set; }
+        public IEnumerable<string>? Scopes { get; set; }
 
         /// <summary>
         /// Gets or sets the creation time.
@@ -42,7 +42,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The creation time.
         /// </value>
-        public DateTime CreationTime { get; set; }
+        public DateTime? CreationTime { get; set; }
 
         /// <summary>
         /// Gets or sets the expiration.

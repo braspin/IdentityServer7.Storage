@@ -8,8 +8,8 @@ namespace IdentityServer7.Stores.Serialization
 {
     public class ClaimLite
     {
-        public string Type { get; set; }
-        public string Value { get; set; }
-        public string ValueType { get; set; }
+        public string? Type { get; set; }
+        public string? Value { get; set; }
+        public string? ValueType { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace IdentityServer7.Stores.Serialization
             var source = serializer.Deserialize<ClaimsPrincipalLite>(reader);
             if (source == null) return null;
 
-            var claims = source.Claims.Select(x => new Claim(x.Type, x.Value, x.ValueType));
+            var claims = source!.Claims!.Select(x => new Claim(x.Type!, x.Value!, x.ValueType!));
             var id = new ClaimsIdentity(claims, source.AuthenticationType, JwtClaimTypes.Name, JwtClaimTypes.Role);
             var target = new ClaimsPrincipal(id);
             return target;

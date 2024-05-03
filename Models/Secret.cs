@@ -17,7 +17,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The description.
         /// </value>
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// Gets or sets the value.
@@ -25,7 +25,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The value.
         /// </value>
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         /// <summary>
         /// Gets or sets the expiration.
@@ -41,7 +41,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The type of the client secret.
         /// </value>
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Secret"/> class.

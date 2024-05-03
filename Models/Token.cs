@@ -39,7 +39,7 @@ namespace IdentityServer7.Models
         /// <summary>
         /// Specifies the confirmation method of the token. This value, if set, will become the cnf claim.
         /// </summary>
-        public string Confirmation { get; set; }
+        public string? Confirmation { get; set; }
 
         /// <summary>
         /// Gets or sets the audiences.
@@ -55,7 +55,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The issuer.
         /// </value>
-        public string Issuer { get; set; }
+        public string? Issuer { get; set; }
         
         /// <summary>
         /// Gets or sets the creation time.
@@ -63,7 +63,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The creation time.
         /// </value>
-        public DateTime CreationTime { get; set; }
+        public DateTime? CreationTime { get; set; }
         
         /// <summary>
         /// Gets or sets the lifetime.
@@ -87,7 +87,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The ID of the client.
         /// </value>
-        public string ClientId { get; set; }
+        public string? ClientId { get; set; }
 
         /// <summary>
         /// Gets or sets the type of access token of the client
@@ -103,7 +103,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The description.
         /// </value>
-        public string Description { get; set; }
+        public string? Description { get; set; }
         
         /// <summary>
         /// Gets or sets the claims.
@@ -127,7 +127,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The subject identifier.
         /// </value>
-        public string SubjectId => Claims.Where(x => x.Type == JwtClaimTypes.Subject).Select(x => x.Value).SingleOrDefault();
+        public string? SubjectId => Claims.Where(x => x.Type == JwtClaimTypes.Subject).Select(x => x.Value).SingleOrDefault();
 
         /// <summary>
         /// Gets the session identifier.
@@ -135,7 +135,7 @@ namespace IdentityServer7.Models
         /// <value>
         /// The session identifier.
         /// </value>
-        public string SessionId => Claims.Where(x => x.Type == JwtClaimTypes.SessionId).Select(x => x.Value).SingleOrDefault();
+        public string? SessionId => Claims.Where(x => x.Type == JwtClaimTypes.SessionId).Select(x => x.Value).SingleOrDefault();
 
         /// <summary>
         /// Gets the scopes.

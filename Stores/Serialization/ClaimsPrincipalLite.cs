@@ -7,7 +7,7 @@ namespace IdentityServer7.Stores.Serialization
 {
     public class ClaimsPrincipalLite
     {
-        public string AuthenticationType { get; set; }
-        public ClaimLite[] Claims { get; set; }
+        public string? AuthenticationType { get; set; }
+        public ClaimLite[]? Claims { get; set; }
     }
 }

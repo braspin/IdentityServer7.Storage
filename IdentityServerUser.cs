@@ -19,17 +19,17 @@ namespace IdentityServer7
         /// <summary>
         /// Subject ID (mandatory)
         /// </summary>
-        public string SubjectId { get; }
+        public string? SubjectId { get; }
 
         /// <summary>
         /// Display name (optional)
         /// </summary>
-        public string DisplayName { get; set; }
+        public string? DisplayName { get; set; }
 
         /// <summary>
         /// Identity provider (optional)
         /// </summary>
-        public string IdentityProvider { get; set; }
+        public string? IdentityProvider { get; set; }
 
         /// <summary>
         /// Authentication methods
@@ -64,17 +64,17 @@ namespace IdentityServer7
         /// <exception cref="ArgumentNullException"></exception>
         public ClaimsPrincipal CreatePrincipal()
         {
-            if (SubjectId.IsMissing()) throw new ArgumentException("SubjectId is mandatory", nameof(SubjectId));
-            var claims = new List<Claim> { new Claim(JwtClaimTypes.Subject, SubjectId) };
+            if (SubjectId!.IsMissing()) throw new ArgumentException("SubjectId is mandatory", nameof(SubjectId));
+            var claims = new List<Claim> { new Claim(JwtClaimTypes.Subject, SubjectId!) };
 
-            if (DisplayName.IsPresent())
+            if (DisplayName!.IsPresent())
             {
-                claims.Add(new Claim(JwtClaimTypes.Name, DisplayName));
+                claims.Add(new Claim(JwtClaimTypes.Name, DisplayName!));
             }
 
-            if (IdentityProvider.IsPresent())
+            if (IdentityProvider!.IsPresent())
             {
-                claims.Add(new Claim(JwtClaimTypes.IdentityProvider, IdentityProvider));
+                claims.Add(new Claim(JwtClaimTypes.IdentityProvider, IdentityProvider!));
             }
 
             if (AuthenticationTime.HasValue)
