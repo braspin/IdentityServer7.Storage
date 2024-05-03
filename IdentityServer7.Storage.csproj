@@ -5,7 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageOutputPath>$(Output)</PackageOutputPath>
     <Title>nuget.org</Title>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
