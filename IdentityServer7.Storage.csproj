@@ -14,6 +14,7 @@
     <PackageTags>identityserver,oauth2</PackageTags>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
+    <PackageId>Braspin.$(AssemblyName)</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
